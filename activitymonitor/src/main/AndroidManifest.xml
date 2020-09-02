@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.panpf.activity.monitor">
+
+    <application>
+        <provider
+            android:name=".ActivityMonitorInitProvider"
+            android:authorities="${applicationId}.activity_monitor_init_provider"
+            android:exported="false" />
+    </application>
+</manifest>
