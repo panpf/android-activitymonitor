@@ -20,7 +20,7 @@ Add the following dependencies to your module `build.gradle` file ：
 implementation "com.github.panpf.activitymonitor:activitymonitor:$LAST_VERSION"
 ```
 
-`$LAST_VERSION`：[![Release][version_icon]][version_link]
+Please replace $LAST_VERSION with the latest version：[![Release][version_icon]][version_link]
 
 Dependencies：
 * androidx.annotation:annotation: 1.1.0
