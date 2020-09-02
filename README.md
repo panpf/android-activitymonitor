@@ -147,8 +147,8 @@ Other available methods:
 [platform_image]: https://img.shields.io/badge/Platform-Android-brightgreen.svg
 [api_image]: https://img.shields.io/badge/API-14%2B-orange.svg
 [api_link]: https://android-arsenal.com/api?level=14
-[version_icon]: https://api.bintray.com/packages/panpf/maven/activity-lifecycle-monitor/images/download.svg
-[version_link]: https://bintray.com/panpf/maven/activity-lifecycle-monitor/_latestVersion#files
+[version_icon]: https://api.bintray.com/packages/panpf/maven/activitymonitor/images/download.svg
+[version_link]: https://bintray.com/panpf/maven/activitymonitor/_latestVersion#files
 [license_image]: https://img.shields.io/badge/License-Apache%202-blue.svg
 [license_link]: https://www.apache.org/licenses/LICENSE-2.0
 
