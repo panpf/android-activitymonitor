@@ -1,7 +1,6 @@
-import com.novoda.gradle.release.PublishExtension
-import java.util.*
-
-plugins { id("com.android.library") }
+plugins {
+    id("com.android.library")
+}
 
 android {
     compileSdkVersion(property("COMPILE_SDK_VERSION").toString().toInt())
@@ -33,17 +32,18 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:${property("ANDROIDX_TEST_JUNIT")}")
 }
 
-Properties().apply { project.file("local.properties").takeIf { it.exists() }?.inputStream()?.use { load(it) } }.takeIf { !it.isEmpty }?.let { localProperties ->
-    apply { plugin("com.novoda.bintray-release") }
+/**
+ * publish config, The following properties are generally configured in the ~/.gradle/gradle.properties file
+ */
+if (hasProperty("signing.keyId")
+    && hasProperty("signing.password")
+    && hasProperty("signing.secretKeyRingFile")
+    && hasProperty("mavenCentralUsername")
+    && hasProperty("mavenCentralPassword")
+) {
+    apply { plugin("com.vanniktech.maven.publish") }
 
-    configure<PublishExtension> {
-        groupId = "com.github.panpf.activitymonitor"
-        artifactId = "activitymonitor"
-        publishVersion = property("VERSION_NAME").toString()
-        desc = "Android, Activity, Monitor"
-        website = "https://github.com/panpf/android-activitymonitor"
-        userOrg = localProperties.getProperty("bintray.userOrg")
-        bintrayUser = localProperties.getProperty("bintray.user")
-        bintrayKey = localProperties.getProperty("bintray.apikey")
+    configure<com.vanniktech.maven.publish.MavenPublishPluginExtension> {
+        sonatypeHost = com.vanniktech.maven.publish.SonatypeHost.S01
     }
 }

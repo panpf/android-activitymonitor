@@ -2,6 +2,7 @@
 
 ![Platform][platform_image]
 [![API][api_image]][api_link]
+[![Release][version_icon]][version_link]
 [![License][license_image]][license_link]
 
 Monitoring the life cycle of all activities through the Application.registerActivityLifecycleCallbacks(ActivityLifecycleCallbacks) method can achieve the following functions:
@@ -12,15 +13,13 @@ Monitoring the life cycle of all activities through the Application.registerActi
 
 ## Getting Started
 
-This library has been published to `jcenter` and private repositories `https://dl.bintray.com/panpf/maven/`, you can freely choose where to download it
-
-Add the following dependencies to your module `build.gradle` file ：
+This library has been published to `mavenCentral`. Add the following dependencies to your module `build.gradle` file: 
 
 ```groovy
-implementation "com.github.panpf.activitymonitor:activitymonitor:$LAST_VERSION"
+implementation "io.github.panpf.activitymonitor:activitymonitor:${LAST_VERSION}"
 ```
 
-Please replace $LAST_VERSION with the latest version：[![Release][version_icon]][version_link]
+`${LAST_VERSION}`: [![Release][version_icon]][version_link] (No include 'v')
 
 Dependencies：
 * androidx.annotation:annotation: 1.1.0
@@ -147,8 +146,8 @@ Other available methods:
 [platform_image]: https://img.shields.io/badge/Platform-Android-brightgreen.svg
 [api_image]: https://img.shields.io/badge/API-14%2B-orange.svg
 [api_link]: https://android-arsenal.com/api?level=14
-[version_icon]: https://api.bintray.com/packages/panpf/maven/activitymonitor/images/download.svg
-[version_link]: https://bintray.com/panpf/maven/activitymonitor/_latestVersion#files
+[version_icon]: https://img.shields.io/maven-central/v/io.github.panpf.activitymonitor/activitymonitor
+[version_link]: https://repo1.maven.org/maven2/io/github/panpf/activitymonitor/
 [license_image]: https://img.shields.io/badge/License-Apache%202-blue.svg
 [license_link]: https://www.apache.org/licenses/LICENSE-2.0
 
